@@ -205,7 +205,7 @@ module Khipu
     end
 
     def percent_encode(v)
-      return URI.escape(v.to_s.to_str, /[^a-zA-Z0-9\-\.\_\~]/)
+      return URI.encode_www_form(v.to_s.to_str)
     end
 
     # Update hearder and query params based on authentication settings.
